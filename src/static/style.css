@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: 'gg sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+    text-align: center;
+}
+
+.default_banner {
+    background-color: rgb(160, 33, 33);
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    height: 40px;
+    padding: 10px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(160, 33, 33);
+    color: white;
+    overflow: hidden;
+}
+
+.navbar a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar li {
+    float: right;
+}
+
+.navbar div {
+    float: left;
+}
+
+.login-input {
+    margin-bottom: 5px;
+}
+
+label {
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+}
+
+span {
+    display: block;
+    margin-top: 5px;
+    color:red;
+    font-size: 12px;
+}
+
+input[type="text"] {
+    padding: 10px; 
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    outline-color: blue;
+}
+
+input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(185, 47, 47);
+    color:white;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input[type="remember_me"] {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 10px 22px;
+    border-radius: 10px;
+}
+
+.register-button {
+    border: none;
+    background-color: transparent;
+    margin-top: 0px;
+}
+
+input::placeholder {
+    text-align: left;
+    opacity: 30%;
+    color: rgb(0, 0, 0);
+}

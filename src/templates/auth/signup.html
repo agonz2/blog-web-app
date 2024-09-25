@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main %}
+    
+{% endblock %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='style.css')}}">
+    <title>Moggers</title>
+  </head>
+
+  <body>
+    <header class="default_banner">Moggers</header>
+    <h1>Create an acccount</h1>
+    <form action="" method="POST" novalidate>
+    {{form.hidden_tag() }}
+
+    <p>{{ form.name(placeholder="First name", size=32)}}</p>
+
+    <p>{{ form.username(placeholder="Username", size=32)}}
+    {% for error in form.username.errors %}
+    <span style="color: red;"> [{{ error }}]</span>
+    {% endfor %}
+    </p>
+    
+    <p>{{ form.passwd(placeholder="Password", size=32)}}</p>
+    <p>{{ form.passwd_confirm(placeholder="Confirm Password", size=32)}}</p>
+    <p>{{ form.submit() }}</p>
+    </form>
+  </body>
+</html>

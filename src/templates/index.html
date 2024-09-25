@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='style.css')}}">
+    <title>Moggers</title>
+  </head>
+
+  <body>
+    <header class="default_banner">Moggers</header>
+    <h1>Sign in</h1>
+    <form action="" method="POST" novalidate>
+    {{form.hidden_tag() }}
+
+    <p>
+        {{ form.username(placeholder="Username") }} 
+        {% for error in form.username.errors %}
+        <span>[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.passwd(placeholder="Password") }} 
+        {% for error in form.passwd.errors %}
+        <span>[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }} </p>
+    <p class="login-input">{{ form.submit() }}</p>
+    </form>
+
+    <button class="register-button" type="button" onclick=simple_action("{{ url_for('signup') }}")>Sign Up</button>
+    <script type="text/javascript">
+        function simple_action(target) {
+            window.location = target
+        }
+    </script>
+  </body>
+</html>
